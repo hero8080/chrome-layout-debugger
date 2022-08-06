@@ -1,0 +1,40 @@
+{
+  "name": "网页布局调试",
+  "version": "1.0.0",
+  "description": "用网页布局调试插件可以直观的看到网页布局，是否存在布局bug,布局是否规范,margin和padding间距是否规范,文本对齐是否规范，按钮热区大小是否规范",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "icons/128.png",
+    "default_title": "网页布局调试",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "activeTab",
+    "notifications",
+    "background"
+  ],
+  "icons": {
+    "128": "icons/128.png",
+    "48": "icons/48.png",
+    "32": "icons/16.png",
+    "16": "icons/16.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+
+      "js": [
+        "js/index.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+
+  ]
+}
