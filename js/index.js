@@ -29,7 +29,7 @@ var loadLayoutDebugger=once(function (){
             right:80px;
             bottom:80px;
             border-radius: 50px;
-            z-index: 10;
+            z-index: 999999999;
             box-shadow: 0px 2px 20px 0px #bfbfbf;
             cursor: pointer;
         }
